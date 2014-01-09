@@ -5,7 +5,7 @@ Language: Ruby
 
 Requirements:
 ==============
-* Ruby
+* Ruby >= 1.8.7
 * Rake (should come with ruby. If not, "gem install rake")
 
 Tested on MRI Ruby 1.8.7, 1.9.3, 2.1.0 on OS X.  Does not require any libraries/dependencies beyond the ruby standard lib.
