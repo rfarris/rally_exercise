@@ -23,7 +23,7 @@ rake test
 
 Usage:
 ==============
-Usage: ./bin/life.rb <board_file> <generations>
+Usage: ./bin/life.rb /path/to/board_file.txt number_of_generations
 
-  board_file:  Text file containing the initial state of the board.
-  generations: The number of generations to run through and print out.
+* board_file:  Text file containing the initial state of the board.
+* generations: The number of generations to run through and print out.
