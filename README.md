@@ -1,5 +1,6 @@
 Exercise 4 - Life
 ==============
+Language: Ruby
 
 
 Requirements:
@@ -19,19 +20,19 @@ rake test
 ./bin/life.rb test/example_in.txt 5
 ```
 
-
-
 Usage:
 ==============
-Usage: ./bin/life.rb /path/to/board_file.txt number_of_generations
+Usage: ./bin/life.rb /path/to/board_file.txt generations
 
 * board_file:  Text file containing the initial state of the board.
 * generations: The number of generations to run through and print out.
 
 
-
 Overview:
 ==============
-* /bin command line interface code
+The project is in a standard ruby/gem project structure (minus the gemfile).
+
+* /bin executable command line interface code
 * /lib core logic
 * /test unit tests
+* Rakefile ruby makefile
