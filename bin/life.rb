@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
+require 'life'
 
-require '../lib/life'
-
-#ARGV = ["../test/example_in.txt", "5"]
 
 if ARGV.length != 2
   puts """Usage: ./life.rb <board_file> <generations>
@@ -36,7 +35,7 @@ rescue => e
 end
 
 begin
-  raise "Please enter a positive interger value for the number of generations" if ARGV[1] =~ /\D+/
+  raise "Please enter a positive integer value for the number of generations" if ARGV[1] =~ /\D+/
   generations = ARGV[1].to_i
   raise "Number of generations must be > 0" if generations < 1
 rescue => e
@@ -44,6 +43,9 @@ rescue => e
   exit(1)
 end
 
+
+
+# Run the sim
 def print_board(board, gen)
   puts "Generation #{gen}:"
   board.each do |row|
@@ -52,11 +54,9 @@ def print_board(board, gen)
   end
   puts
 end
-
 life = Life.new board
 
 print_board(life.current_board, 0)
-
 (1..generations).each do |i|
   print_board(life.next_gen, i)
 end

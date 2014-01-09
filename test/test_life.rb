@@ -1,5 +1,6 @@
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
 require 'test/unit'
-require '../lib/life'
+require 'life'
 
 
 class TestLife < Test::Unit::TestCase
@@ -9,7 +10,7 @@ class TestLife < Test::Unit::TestCase
   end
 
   def test_parse_board
-    board_file = File.read('example_in.txt')
+    board_file = File.read('test/example_in.txt')
     expected = [
         [0, 1, 0, 0, 0],
         [1, 0, 0, 1, 1],
@@ -32,7 +33,7 @@ class TestLife < Test::Unit::TestCase
 
 
   def test_given_example
-    life = Life.new parse_board(File.read('example_in.txt'))
+    life = Life.new parse_board(File.read('test/example_in.txt'))
     expected = [
         [0, 0, 0, 0, 0],
         [1, 0, 1, 1, 1],
