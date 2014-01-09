@@ -4,6 +4,10 @@ require '../lib/life'
 
 class TestLife < Test::Unit::TestCase
 
+  def parse_board(input)
+    Life.parse_board input
+  end
+
   def test_parse_board
     board_file = File.read('example_in.txt')
     expected = [
