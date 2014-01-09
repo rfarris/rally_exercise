@@ -1,5 +1,11 @@
 
+#
+# Contains the state and logic to run the Life game simulation.
+#
 class Life
+  #
+  # Initialize the class with either a string representation of the board, or a double array containing the cells.
+  #
   def initialize(board)
     if board.is_a? String
       @board = Life.parse_board(board)
@@ -14,6 +20,9 @@ class Life
     @board
   end
 
+  #
+  # Compute and return the next generation of the board.
+  #
   def next_gen
     next_board = @board.map { |row| row.map { |col| 0 }} # init a new board the same size as the existing
 
